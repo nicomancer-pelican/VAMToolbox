@@ -250,7 +250,7 @@ def loadImageSeq(file_name:str):
     return A
 
 
-def _insertImage(image,image_out,image_config,v_offset,**kwargs):
+def _insertImage(image,image_out,image_config,v_offset=0,**kwargs):
 
     N_u = image_config.N_u
     N_v = image_config.N_v
