@@ -130,10 +130,10 @@ def minimizeCAL(target_geo,proj_geo,options):
 
 
         # Threshold current reconstruction
-        # if options.d_h is not None:
-        #     x_thresh = vamtoolbox.util.data.sigmoid(x-options.d_h,options.sigmoid)
-        # else:
-        x_thresh, _ = thresholdReconstruction(x)
+        if options.d_h is not None:
+            x_thresh = vamtoolbox.util.data.sigmoid(x-options.d_h,options.sigmoid)
+        else:
+            x_thresh, _ = thresholdReconstruction(x)
         
 
         delta_x = x_thresh - opt_target
